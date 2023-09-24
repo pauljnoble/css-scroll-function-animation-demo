@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation Timeline Scroll() Demo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="explainer">
+      <input type="checkbox"></input>
+      <div></div>
+      <p>
+        Demo of CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline/scroll#browser_compatibility">scroll()</a> function in concert with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline">animation-timeline</a>.
+      </p>
+      <p>
+        Works in Chrome 117+. Try in Chrome on Android or in Chrome Desktop responsive mode (use <a href="https://codepen.io/paulnoble/debug/oNJGddZ">debug view</a>) or with a trackpad for best scrolling experience.
+      </p>
+      <p>
+     <a href="https://x.com/paul_uiux">paul_uiux@</a></p>
+    </div>
+    
+    <div class="scroller">
+      <div class="bg" data-scroll-anim-block></div>
+      <div class="nav" data-scroll-anim-block>
+        <a href="#item1" data-scroll-anim-block></a>
+        <a href="#item2" data-scroll-anim-block></a>
+        <a href="#item3" data-scroll-anim-block></a>
+        <a href="#item4" data-scroll-anim-block></a>
+      </div>
+      
+      <div class="stage" data-scroll-anim-block>
+        <div class="spindle" data-scroll-anim-block>
+
+          <div class="facia" data-scroll-anim-block data-left data-order="1">
+            <div class="content">
+              <div class="title">R&B<br/>Hits</div>
+              <img src="./assets/item-1.png"/>
+            </div>
+          </div>
+          <div class="facia" data-scroll-anim-block data-right data-order="1">
+            <div class="content">
+              <div class="title">R&B<br/>Hits</div>
+              <img src="./assets/item-1.png"/>
+            </div>
+          </div>
+
+          <div class="facia" data-scroll-anim-block data-left data-order="2">
+            <div class="content">
+              <div class="title">Alterna-<br/>tive Pop</div>
+              <img src="./assets/item-2.png"/>
+            </div>
+          </div>
+          <div class="facia" data-scroll-anim-block data-right data-order="2">
+            <div class="content">
+              <div class="title">Alterna-<br/>tive Pop</div>
+              <img src="./assets/item-2.png"/>
+            </div>
+          </div>
+
+          <div class="facia" data-scroll-anim-block data-left data-order="3">
+            <div class="content">
+              <div class="title">Future<br/>Bass</div>
+              <img src="./assets/item-3.png"/>
+
+            </div>
+          </div>
+          <div class="facia" data-scroll-anim-block data-right data-order="3">
+            <div class="content">
+              <div class="title">Future<br/>Bass</div>
+              <img src="./assets/item-3.png"/>
+            </div>
+          </div>
+          
+          <div class="facia" data-scroll-anim-block data-left data-order="4">
+            <div class="content">
+              <div class="title">Afro<br/>Pop</div>
+              <img src="./assets/item-4.png"/>
+            </div>
+          </div>
+
+          <div class="facia" data-scroll-anim-block data-right data-order="4">
+            <div class="content">
+              <div class="title">Afro<br/>Pop</div>
+              <img src="./assets/item-4.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-item" id="item1"></div>
+      <div class="scroll-item" id="item2"></div>
+      <div class="scroll-item" id="item3"></div>
+      <div class="scroll-item" id="item4"></div>
+    </div>
+  </body>
+</html>
