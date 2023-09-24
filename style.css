@@ -26,6 +26,14 @@
   --item-gradient-to-2: #235A4300;
   --item-gradient-to-3: #F4979500;
   --item-gradient-to-4: #076D8300;
+  --item-main-text-color-1: white;
+  --item-main-text-color-2: white;
+  --item-main-text-color-3: #3D1629;
+  --item-main-text-color-4: white;
+  --item-alt-text-color-1: #FFB199;
+  --item-alt-text-color-2: #84E3BB;
+  --item-alt-text-color-3: #A74C4A;
+  --item-alt-text-color-4: #0F5F71;
 }
 
 * {
@@ -180,7 +188,7 @@ body {
   left: -100%;
 }
 
-.content .title {
+.title {
   position: absolute;
   top: var(--panel-padding-y);
   left: var(--panel-padding-x);
@@ -189,6 +197,14 @@ body {
   max-width: 75%;
   color: white;
   line-height: var(--panel-line-height);
+}
+
+.subtext {
+  position: absolute;
+  left: var(--panel-padding-x);
+  bottom: var(--panel-padding-y);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .bg {
@@ -245,6 +261,14 @@ body {
 }
 .facia[data-order="1"] {
   background-color: var(--item-panel-1);
+}
+
+.facia[data-order="1"] .title {
+  color: var(--item-main-text-color-1);
+}
+
+.facia[data-order="1"] .subtext {
+  color: var(--item-alt-text-color-1);
 }
 
 .facia[data-order="1"][data-right] .content::before {
@@ -312,6 +336,14 @@ body {
   background-color: var(--item-panel-2);
 }
 
+.facia[data-order="2"] .title {
+  color: var(--item-main-text-color-2);
+}
+
+.facia[data-order="2"] .subtext {
+  color: var(--item-alt-text-color-2);
+}
+
 .facia[data-order="2"][data-right] .content::before {
   background-image: linear-gradient(to right, var(--item-gradient-from-2), var(--item-gradient-to-2));
   content: "";
@@ -377,6 +409,14 @@ body {
   background-color: var(--item-panel-3);
 }
 
+.facia[data-order="3"] .title {
+  color: var(--item-main-text-color-3);
+}
+
+.facia[data-order="3"] .subtext {
+  color: var(--item-alt-text-color-3);
+}
+
 .facia[data-order="3"][data-right] .content::before {
   background-image: linear-gradient(to right, var(--item-gradient-from-3), var(--item-gradient-to-3));
   content: "";
@@ -440,6 +480,14 @@ body {
 }
 .facia[data-order="4"] {
   background-color: var(--item-panel-4);
+}
+
+.facia[data-order="4"] .title {
+  color: var(--item-main-text-color-4);
+}
+
+.facia[data-order="4"] .subtext {
+  color: var(--item-alt-text-color-4);
 }
 
 .facia[data-order="4"][data-right] .content::before {

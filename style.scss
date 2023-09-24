@@ -27,6 +27,14 @@ $item-count: 4;
   --item-gradient-to-2: #235A4300;
   --item-gradient-to-3: #F4979500;
   --item-gradient-to-4: #076D8300;
+  --item-main-text-color-1: white;
+  --item-main-text-color-2: white; 
+  --item-main-text-color-3: #3D1629; 
+  --item-main-text-color-4: white; 
+  --item-alt-text-color-1: #FFB199;
+  --item-alt-text-color-2: #84E3BB; 
+  --item-alt-text-color-3: #A74C4A; 
+  --item-alt-text-color-4: #0F5F71; 
 }
 
 * {
@@ -179,7 +187,7 @@ body {
   left: -100%;
 }
 
-.content .title {
+.title {
   position: absolute;
   top: var(--panel-padding-y);
   left: var(--panel-padding-x);
@@ -190,7 +198,19 @@ body {
   line-height: var(--panel-line-height);
 }
 
-
+.subtext {
+  position: absolute;
+  left: var(--panel-padding-x);
+  bottom: var(--panel-padding-y);
+  font-size: 18px;
+  font-weight: 700;
+  // background-color: rgba(0, 0, 0, 0.2);
+  // padding: 0 20px;
+  // border-radius: 20px;
+  // height: 40px;
+  // display: flex;
+  // align-items: center;
+}
 
 .bg {
   position: absolute;
@@ -230,6 +250,14 @@ body {
   // Classes and styles for each item
   .facia[data-order="#{$i}"] {
     background-color: var(--item-panel-#{$i});
+  }
+
+  .facia[data-order="#{$i}"] .title {
+    color: var(--item-main-text-color-#{$i});
+  }
+
+  .facia[data-order="#{$i}"] .subtext {
+    color: var(--item-alt-text-color-#{$i});
   }
 
   .facia[data-order="#{$i}"][data-right] .content::before {
